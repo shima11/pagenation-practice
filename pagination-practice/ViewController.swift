@@ -8,13 +8,70 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MultipleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+  let collectionView: UICollectionView = .init(frame: .zero)
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+
+    view.addSubview(collectionView)
+
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: String.init(describing: UICollectionViewCell.self))
+
   }
 
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 10
+  }
+
+
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String.init(describing: UICollectionViewCell.self), for: indexPath)
+    return cell
+  }
+}
+
+class ViewController: UIViewController {
+
+  let id: Int
+
+  init(id: Int) {
+    self.id = id
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    print(#function, id)
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    print(#function, id)
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    print(#function, id)
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    print(#function, id)
+  }
+
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    print(#function, id)
+  }
 
 }
 

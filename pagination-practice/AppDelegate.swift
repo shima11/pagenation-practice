@@ -17,7 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow(frame: UIScreen.main.bounds)
 
-    let controller = MultipleViewController(viewControllers: [])
+    let controller = MultipleViewController(viewControllers: [
+      ChildViewController(id: 1),
+      ChildViewController(id: 2),
+      ChildViewController(id: 3),
+    ])
     let navigationController = UINavigationController(rootViewController: controller)
 
     window?.rootViewController = navigationController

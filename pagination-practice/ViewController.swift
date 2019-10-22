@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EasyPeasy
 
 final class MultipleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -40,13 +41,18 @@ final class MultipleViewController: UIViewController, UICollectionViewDelegate, 
   }
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    return viewControllers.count
   }
 
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String.init(describing: UICollectionViewCell.self), for: indexPath)
+    let viewController = viewControllers[indexPath.row]
+    cell.contentView.addSubview(viewController.view)
+    viewController.view.easy.layout(
+      Size(.init(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+    )
     return cell
   }
 }
@@ -58,6 +64,7 @@ final class ChildViewController: UIViewController {
   init(id: Int) {
     self.id = id
     super.init(nibName: nil, bundle: nil)
+
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -67,6 +74,8 @@ final class ChildViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     print(#function, id)
+
+    view.backgroundColor = .lightGray
   }
 
   override func viewWillAppear(_ animated: Bool) {

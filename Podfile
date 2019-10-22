@@ -8,5 +8,6 @@ target 'pagination-practice' do
   # Pods for pagination-practice
 
   pod "EasyPeasy"
-
+  pod "Reveal-SDK"
+  
 end

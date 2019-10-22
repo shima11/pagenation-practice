@@ -8,12 +8,28 @@
 
 import UIKit
 
-class MultipleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+final class MultipleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-  let collectionView: UICollectionView = .init(frame: .zero)
+  private let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: .init())
 
+  private var viewControllers: [UIViewController]
+
+  init(viewControllers: [UIViewController]) {
+    
+    self.viewControllers = viewControllers
+
+    super.init(nibName: nil, bundle: nil)
+
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    view.backgroundColor = .white
 
     view.addSubview(collectionView)
 
@@ -35,7 +51,7 @@ class MultipleViewController: UIViewController, UICollectionViewDelegate, UIColl
   }
 }
 
-class ViewController: UIViewController {
+final class ChildViewController: UIViewController {
 
   let id: Int
 

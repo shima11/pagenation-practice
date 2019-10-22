@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2A091D0C2C3F4F29D64035A3 /* Pods_pagination_practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292A00FDE6CB053D50B245B3 /* Pods_pagination_practice.framework */; };
 		D4563089231FA70100C607F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4563088231FA70100C607F1 /* AppDelegate.swift */; };
 		D456308B231FA70100C607F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456308A231FA70100C607F1 /* ViewController.swift */; };
-		D456308E231FA70100C607F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D456308C231FA70100C607F1 /* Main.storyboard */; };
 		D4563090231FA70200C607F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D456308F231FA70200C607F1 /* Assets.xcassets */; };
 		D4563093231FA70200C607F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4563091231FA70200C607F1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,7 +20,6 @@
 		D4563085231FA70100C607F1 /* pagination-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pagination-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4563088231FA70100C607F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D456308A231FA70100C607F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D456308D231FA70100C607F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D456308F231FA70200C607F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4563092231FA70200C607F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4563094231FA70200C607F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +44,6 @@
 				959D61CF0B601E5984ACBABA /* Pods-pagination-practice.debug.xcconfig */,
 				FF5347036F15E499CE52117A /* Pods-pagination-practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,7 +70,6 @@
 			children = (
 				D4563088231FA70100C607F1 /* AppDelegate.swift */,
 				D456308A231FA70100C607F1 /* ViewController.swift */,
-				D456308C231FA70100C607F1 /* Main.storyboard */,
 				D456308F231FA70200C607F1 /* Assets.xcassets */,
 				D4563091231FA70200C607F1 /* LaunchScreen.storyboard */,
 				D4563094231FA70200C607F1 /* Info.plist */,
@@ -151,7 +147,6 @@
 			files = (
 				D4563093231FA70200C607F1 /* LaunchScreen.storyboard in Resources */,
 				D4563090231FA70200C607F1 /* Assets.xcassets in Resources */,
-				D456308E231FA70100C607F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,14 +207,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D456308C231FA70100C607F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D456308D231FA70100C607F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D4563091231FA70200C607F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
